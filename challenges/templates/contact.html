@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="product__description pt-4 pb-4 pl-3 pr-3 text-white">
+    <h2 class="tm-page-title mb-3">📬 Get in Touch</h2>
+
+    <p>
+        Want to collaborate, ask a question, or suggest a challenge? We’d love to hear from you!
+        <br><br>
+        Or maybe you need help building or troubleshooting your own control system project — let our expertise support your automation journey.
+    </p>
+
+    <form action="{% url 'contact' %}" method="post" class="contact-form mt-4">
+        {% csrf_token %}
+        <div class="row">
+            <div class="form-group col-md-6">
+                <input type="text" name="contact_name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="email" name="contact_email" class="form-control" placeholder="Your Email" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <textarea name="contact_message" class="form-control" rows="8" placeholder="Your Message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary tm-btn-submit">Send Message</button>
+    </form>
+</div>
+{% endblock %}

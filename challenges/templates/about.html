@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="product__description p-sm-4 p-2">
+    <div class="row mb-3">
+        <div class="col-12">
+            <h2 class="tm-page-title">About the Creator</h2>
+        </div>
+    </div>
+    <div class="row tm-reverse-sm">
+        <div class="col-xl-8">
+            <p class="mb-4">ControlCore is created and maintained by Anthony Ndungu, a mechanical engineer passionate about PLCs, automation, and industrial logic challenges. </p>
+            <p class="mb-5">Each challenge is built around real-world logic and simulated in CODESYS using best engineering practices.</p>
+            <a href="#" class="btn tm-btn-gray">More About Me</a>
+        </div>
+        <div class="col-xl-4 mb-4">
+            <img src="{% static 'img/Anthony_2.jpg' %}" class="img-fluid">
+        </div>
+    </div>
+</div>
+{% endblock %}

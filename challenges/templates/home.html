@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Welcome Section -->
+<section class="tm-section py-5 bg-dark text-white">
+  <div class="container">
+    <h2 class="mb-3">🔧 Welcome to ControlCore</h2>
+    <img src="{% static 'img/underline.png' %}" class="img-fluid mb-3" alt="underline">
+    <p class="lead">
+      <strong>ControlCore</strong> is a showcase of the automation, PLC, and control system projects I build using <strong>CODESYS</strong>.
+      It’s a space where I share real-world solutions — from elevators to PID systems — in a way that both professionals and learners can explore, get inspired, and even replicate.
+    </p>
+    <p>
+      Each project reflects practical engineering ideas, often backed by GitHub code, visual diagrams, and demo videos.
+      Whether you're building your own system, just getting started with PLCs, or exploring how modern industrial logic is structured — you're in the right place.
+    </p>
+
+    <div class="row mt-5">
+      <div class="col-md-6 mb-4">
+        <img src="{% static 'img/project_based.png' %}" class="img-fluid rounded shadow">
+        <h5 class="mt-3 text-warning">Project-Based Showcase</h5>
+        <p>I build and share control system projects — logic that can actually be deployed, not just theory.</p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <img src="{% static 'img/codesys.png' %}" class="img-fluid rounded shadow">
+        <h5 class="mt-3 text-warning">Built on CODESYS</h5>
+        <p>All projects are done using CODESYS, and shared openly with source code, videos, and diagrams when available.</p>
+      </div>
+    </div>
+
+    <hr class="border-light mt-5">
+
+    <h3 class="mt-4">🚀 Featured Project: Elevator Position Increment</h3>
+    <p>
+      Start with one of the core challenges I solved — an elevator logic built using <strong>tab memory</strong> to move across different floors.
+      Simple in theory, but powerful for understanding structured PLC design.
+    </p>
+
+    <a href="{% url 'challenges' %}" class="btn btn-outline-light mt-3">View All Projects</a>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="tm-section py-5 bg-secondary text-white">
+  <div class="container">
+    <h2>👥 Meet the Team</h2>
+    <p class="lead">This platform is brought to life through the collaboration of creatives, developers, and engineers.</p>
+
+    <div class="row text-center mt-4">
+      <div class="col-md-4 mb-4">
+        <img src="{% static 'img/Anthony.jpg' %}" class="rounded-circle mb-3" width="140" alt="Anthony">
+        <h5>Anthony Ndungu</h5>
+        <p><small>Mechanical Engineer</small></p>
+      </div>
+      <!-- <div class="col-md-4 mb-4">
+        <img src="{% static 'img/team-2.jpg' %}" class="rounded-circle mb-3" width="140" alt="Jane">
+        <h5>Jane Doe</h5>
+        <p><small>Media & Editing</small></p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="{% static 'img/team-3.jpg' %}" class="rounded-circle mb-3" width="140" alt="John">
+        <h5>John Smith</h5>
+        <p><small>Web Developer & UX Designer</small></p>
+      </div> -->
+    </div>
+
+    <div class="text-center mt-3">
+      <a href="{% url 'about' %}" class="btn btn-light">See Full Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- Work Section -->
+<section class="tm-section py-5 bg-dark text-white">
+  <div class="container">
+    <h2>🛠️ Project Highlights</h2>
+    <p class="lead">These are real automation setups I’ve worked on — each with a unique focus or challenge.</p>
+
+    <div class="row mt-4">
+      <div class="col-md-4 mb-4">
+        <div class="card bg-dark border-light shadow h-100">
+          <img src="{% static 'img/elevator.png' %}" class="card-img-top" alt="Elevator">
+          <div class="card-body">
+            <h5 class="card-title text-warning">Elevator Position Increment</h5>
+            <p class="card-text text-light">Smart logic to move between floors with tab memory and direction control.</p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-md-4 mb-4">
+        <div class="card bg-dark border-light shadow h-100">
+          <img src="{% static 'img/work-2.jpg' %}" class="card-img-top" alt="PID Control">
+          <div class="card-body">
+            <h5 class="card-title text-warning">PID Temperature Control</h5>
+            <p class="card-text text-light">A fully parameterized PID loop for industrial heating chambers.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card bg-dark border-light shadow h-100">
+          <img src="{% static 'img/work-3.jpg' %}" class="card-img-top" alt="State Machine">
+          <div class="card-body">
+            <h5 class="card-title text-warning">State Machine Sorting</h5>
+            <p class="card-text text-light">Conveyor logic using state transitions for sorting metal vs plastic.</p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="text-center mt-3">
+      <a href="{% url 'challenges' %}" class="btn btn-outline-light">See All Challenges</a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="tm-section py-5 bg-secondary text-white">
+  <div class="container">
+    <h2>📬 Contact</h2>
+    <p class="lead">Want to collaborate, feature a build, just say hi, or maybe you need help building or troubleshooting your own control system project? Drop a message below.</p>
+
+    <form method="POST" action="{% url 'contact' %}" class="mt-4">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" name="contact_name" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="email" name="contact_email" class="form-control" placeholder="Your Email" required>
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <textarea rows="4" name="contact_message" class="form-control" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </div>
+</section>
+
+{% endblock %}
