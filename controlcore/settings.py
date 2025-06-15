@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -125,14 +126,9 @@ USE_TZ = True
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Static files
 STATIC_URL = '/static/'
-
-# Tells Django where to find static files during development
-STATICFILES_DIRS = [
-    BASE_DIR / 'challenges' / 'static',  # App-specific static
-]
-
-# Optional - for production
+STATICFILES_DIRS = [ BASE_DIR / 'challenges' / 'static' ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
