@@ -11,20 +11,20 @@
         Or maybe you need help building or troubleshooting your own control system project — let our expertise support your automation journey.
     </p>
 
-    <form action="{% url 'contact' %}" method="post" class="contact-form mt-4">
-        {% csrf_token %}
+    <form action="https://formspree.io/f/xyzabcde" method="POST" class="mt-4">
         <div class="row">
-            <div class="form-group col-md-6">
-                <input type="text" name="contact_name" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="form-group col-md-6">
-                <input type="email" name="contact_email" class="form-control" placeholder="Your Email" required>
-            </div>
+          <div class="col-md-6 mb-3">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+          </div>
         </div>
-        <div class="form-group">
-            <textarea name="contact_message" class="form-control" rows="8" placeholder="Your Message..." required></textarea>
+        <div class="form-group mb-3">
+          <textarea rows="4" name="message" class="form-control" placeholder="Your Message" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary tm-btn-submit">Send Message</button>
-    </form>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+      
 </div>
 {% endblock %}
