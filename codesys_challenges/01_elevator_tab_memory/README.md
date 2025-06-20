@@ -11,7 +11,6 @@ Welcome to **ControlCore Forge**, a hub for automation engineers, students, and 
 📽️ **Watch the Elevator Position Challenge Walkthrough:**  
 👉 [![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE)
 
-> Replace `YOUR_VIDEO_ID_HERE` with your actual YouTube video ID.
 
 ---
 
@@ -80,7 +79,7 @@ In this challenge, we simulate a **4-floor elevator** system with the following 
 ## 🤝 Contributing
 
 Have an idea for a challenge or want to feature your project?  
-Open an issue or email us from the [Contact page](https://controlcore.onrender.com/#contact).
+Open an issue or email us from the [Contact page](https://controlcore.onrender.com/contact).
 
 ---
 
