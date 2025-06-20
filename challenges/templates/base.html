@@ -64,7 +64,7 @@
       <nav class="nav flex-column nav-pills w-25 bg-dark p-3 overflow-auto" id="sidebar-nav">
         <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">Welcome</a>
         <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="{% url 'about' %}">Our Team</a>
-        <a class="nav-link {% if request.path == '/challenges/' %}active{% endif %}" href="{% url 'challenges' %}">Our Work</a>
+        <a class="nav-link {% if request.path == '/challenges/' %}active{% endif %}" href="{% url 'weekly_challenges' %}">Our Work</a>
         <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
       </nav>
 
