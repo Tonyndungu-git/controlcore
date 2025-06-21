@@ -3,42 +3,47 @@
 
 {% block content %}
 
-<!-- Welcome Section -->
-<section class="tm-section py-5 bg-dark text-white">
-  <div class="container">
-    <h2 class="mb-3">🔧 Welcome to ControlCore Forge</h2>
-    <img src="{% static 'img/underline.png' %}" class="img-fluid mb-3" alt="underline">
-    <p class="lead">
-      <strong>ControlCore Forge</strong> is a showcase of the automation, PLC, and control system projects I build using <strong>CODESYS</strong>.
-      It’s a space where I share real-world solutions — from elevators to PID systems — in a way that both professionals and learners can explore, get inspired, and even replicate.
-    </p>
-    <p>
-      Each project reflects practical engineering ideas, often backed by GitHub code, visual diagrams, and demo videos.
-      Whether you're building your own system, just getting started with PLCs, or exploring how modern industrial logic is structured — you're in the right place.
+<!-- Hero Welcome Section -->
+<section class="tm-section py-5 bg-dark text-white" id="hero-section">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">
+      🔧 Welcome to <span class="text-warning">ControlCore Forge</span>
+    </h1>
+    <!-- <img src="{% static 'img/underline.png' %}" class="img-fluid mb-4" alt="underline" style="max-width: 200px;"> -->
+
+    <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
+      <strong>ControlCore Forge</strong> is a hands-on showcase of industrial automation and PLC logic using <strong>CODESYS</strong>. 
+      Real-world solutions — from elevators to PID — shared with code, diagrams, and demos.
     </p>
 
-    <div class="row mt-5">
-      <div class="col-md-6 mb-4">
-        <img src="{% static 'img/project_based.png' %}" class="img-fluid rounded shadow">
-        <h5 class="mt-3 text-warning">Project-Based Showcase</h5>
-        <p>I build and share control system projects — logic that can actually be deployed, not just theory.</p>
+    <p class="animate__animated animate__fadeInUp animate__delay-2s">
+      Ideal for engineers, learners, or enthusiasts exploring how modern logic is designed and deployed in control systems.
+    </p>
+
+    <div class="row mt-5 g-4 justify-content-center">
+      <div class="col-md-5">
+        <div class="card bg-transparent border border-light h-100 shadow-lg hover-zoom">
+          <img src="{% static 'img/project_based.png' %}" class="card-img-top rounded-top" alt="Project Showcase">
+          <div class="card-body">
+            <h5 class="card-title text-warning">Project-Based Showcase</h5>
+            <p class="card-text text-light">Each shared project is deployable, functional logic — not just academic theory.</p>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6 mb-4">
-        <img src="{% static 'img/codesys.png' %}" class="img-fluid rounded shadow">
-        <h5 class="mt-3 text-warning">Built on CODESYS</h5>
-        <p>All projects are done using CODESYS, and shared openly with source code, videos, and diagrams when available.</p>
+      <div class="col-md-5">
+        <div class="card bg-transparent border border-light h-100 shadow-lg hover-zoom">
+          <img src="{% static 'img/codesys.png' %}" class="card-img-top rounded-top" alt="Built on CODESYS">
+          <div class="card-body">
+            <h5 class="card-title text-warning">Built on CODESYS</h5>
+            <p class="card-text text-light">Each project is developed using CODESYS with source code, diagrams, and video tutorials.</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <hr class="border-light mt-5">
-
-    <h3 class="mt-4">🚀 Featured Project: Elevator Position Increment</h3>
-    <p>
-      Start with one of the core challenges I solved — an elevator logic built using <strong>tab memory</strong> to move across different floors.
-      Simple in theory, but powerful for understanding structured PLC design.
-    </p>
-
-    <a href="{% url 'weekly_challenges' %}" class="btn btn-outline-light mt-3">View All Projects</a>
+    <div class="mt-5">
+      <a href="{% url 'weekly_challenges' %}" class="btn btn-outline-warning btn-lg px-4">🚀 Explore Projects</a>
+    </div>
   </div>
 </section>
 
@@ -54,16 +59,6 @@
         <h5>Anthony Ndungu</h5>
         <p><small>Mechanical Engineer</small></p>
       </div>
-      <!-- <div class="col-md-4 mb-4">
-        <img src="{% static 'img/team-2.jpg' %}" class="rounded-circle mb-3" width="140" alt="Jane">
-        <h5>Jane Doe</h5>
-        <p><small>Media & Editing</small></p>
-      </div>
-      <div class="col-md-4 mb-4">
-        <img src="{% static 'img/team-3.jpg' %}" class="rounded-circle mb-3" width="140" alt="John">
-        <h5>John Smith</h5>
-        <p><small>Web Developer & UX Designer</small></p>
-      </div> -->
     </div>
 
     <div class="text-center mt-3">
@@ -76,7 +71,9 @@
 <section class="tm-section py-5 bg-dark text-white">
   <div class="container">
     <h2>🛠️ Project Highlights</h2>
-    <p class="lead">These are real automation setups I’ve worked on — each with a unique focus or challenge.</p>
+    
+    <p class="lead">Start with one of the core challenges I solved — an elevator logic built using <strong>state machine</strong> to move across different floors.
+      Simple in theory, but powerful for understanding structured PLC design.</p>
 
     <div class="row mt-4">
       <div class="col-md-4 mb-4">
@@ -88,24 +85,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="col-md-4 mb-4">
-        <div class="card bg-dark border-light shadow h-100">
-          <img src="{% static 'img/work-2.jpg' %}" class="card-img-top" alt="PID Control">
-          <div class="card-body">
-            <h5 class="card-title text-warning">PID Temperature Control</h5>
-            <p class="card-text text-light">A fully parameterized PID loop for industrial heating chambers.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card bg-dark border-light shadow h-100">
-          <img src="{% static 'img/work-3.jpg' %}" class="card-img-top" alt="State Machine">
-          <div class="card-body">
-            <h5 class="card-title text-warning">State Machine Sorting</h5>
-            <p class="card-text text-light">Conveyor logic using state transitions for sorting metal vs plastic.</p>
-          </div>
-        </div>
-      </div> -->
     </div>
 
     <div class="text-center mt-3">
@@ -134,7 +113,6 @@
       </div>
       <button type="submit" class="btn btn-primary">Send Message</button>
     </form>
-    
   </div>
 </section>
 
