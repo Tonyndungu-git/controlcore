@@ -8,7 +8,7 @@ Welcome to **ControlCore Forge**, a hub for automation engineers, students, and 
 
 ## 🎬 Featured Video Presentation
 
-<p>📽️ <strong>Watch the Elevator Position Challenge Walkthrough:</strong></p>
+<p>📽️ <strong>Watch the Elevator Position Challenge demo:</strong></p>
 <a href="https://us05web.zoom.us/clips/share/RANvFqZRRreSOpNKkUXsow" target="_blank">
   <img src="{% static 'img/elevator_thumb.png' %}" alt="Watch Elevator Challenge" class="img-fluid" style="max-width: 500px; border-radius: 10px;">
 </a>
